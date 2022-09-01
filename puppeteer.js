@@ -13,7 +13,7 @@ async function getStudents(){
     const browser = await puppeteer.launch({
         headless: false,
         defaultViewport: null,
-        args: ["--disable-notifications"]
+        args: ["--disable-dev-shm-usage", "--no-sandbox"],
     });
 
         const page = await browser.newPage();
